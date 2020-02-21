@@ -2,6 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 5000;
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
+
+mongoose.connect(MONGODB_URI);
 
 const app = express();
 

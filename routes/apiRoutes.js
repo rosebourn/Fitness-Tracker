@@ -20,25 +20,9 @@ router.put("/api/workouts/:id", (req, res) => {
       .catch(err => {
         res.status(400).json(err);
       });
-    // Workout.findByIdAndUpdate({ _id: req.params.id }, req.body)
-    // .then(function() {
-    //   Workout.findOne({ _id: req.params.id }).then(function(dbWorkout) {
-    //     res.json(dbWorkout);
-    //   });
-    // })
-    // .catch(err => {
-    //   res.status(400).json(err);
-    // });
 });
 
 router.post("/api/workouts", ({ body }, res) => {
-    // Workout.insertMany(body)
-    // .then(dbWorkout => {
-    //   res.json(dbWorkout);
-    // })
-    // .catch(err => {
-    //   res.status(400).json(err);
-    // });
   Workout.create({})
     .then(dbWorkout => {
       res.json(dbWorkout);
